@@ -1,0 +1,66 @@
+
+<nav>
+  <div class="nav-wrapper">
+    <a href="" class="brand-logo" style="margin-right: 20px">Prueba Tecnica</a>
+  </div>
+</nav>
+
+<div class="container">
+  <fieldset>
+    <legend>Formulario</legend>
+     <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="name" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" type="text" class="validate">
+              <label for="name">Names</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="last_name" [(ngModel)]="last_name" [ngModelOptions]="{standalone: true}" type="text" class="validate">
+              <label for="last_name">LastNames</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="last_name" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" type="text" class="validate">
+              <label for="last_name">Email</label>
+            </div>
+          </div>
+          <button class="btn waves-effect waves light" type="button" (click)="savePersonData()" name="action">
+            <i class="material-icons center">Submit</i>
+          </button>&nbsp;&nbsp;
+ 
+          <button class="btn waves-effect waves light" type="button"  routerLink="other-view">
+            <i class="material-icons center">Other view</i>
+          </button>&nbsp;&nbsp;
+
+          <button class="btn waves-effect waves light" type="button" (click)="clean()" name="action">
+            <i class="material-icons center">Clean</i>
+          </button>
+          
+        </form>
+      </div>
+  </fieldset>
+</div>
+<router-outlet></router-outlet>
+
+
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Footer Content</h5>
+        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+      </div>
+
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+    © 2014 Copyright Text
+    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+    </div>
+  </div>
+</footer>
